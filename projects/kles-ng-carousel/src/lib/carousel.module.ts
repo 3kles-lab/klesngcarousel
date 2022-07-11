@@ -1,8 +1,8 @@
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { KlesCarouselComponent } from "./carousel.component";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KlesCarouselComponent } from './carousel.component';
 
 const components = [KlesCarouselComponent];
 
@@ -11,7 +11,7 @@ const components = [KlesCarouselComponent];
     declarations: [
         components
     ],
-    imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
+    imports: [CommonModule, FormsModule, BrowserAnimationsModule],
     entryComponents: [
         components
     ],

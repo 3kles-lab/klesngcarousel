@@ -56,7 +56,7 @@ import {
 })
 export class KlesCarouselComponent implements OnInit {
   @Input() slides: KlesSlide[];
-  @Input() animationType = AnimationType.Scale;
+  @Input() animationType = AnimationType.Fade;
 
   currentSlide = 0;
 
