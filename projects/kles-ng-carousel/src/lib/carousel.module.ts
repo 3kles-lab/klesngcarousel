@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KlesCarouselComponent } from './carousel.component';
 
 const components = [KlesCarouselComponent];
@@ -11,7 +10,7 @@ const components = [KlesCarouselComponent];
     declarations: [
         components
     ],
-    imports: [CommonModule, FormsModule, BrowserAnimationsModule],
+    imports: [CommonModule, FormsModule],
     entryComponents: [
         components
     ],
