@@ -72,6 +72,12 @@ export class KlesCarouselComponent implements OnInit {
     this.currentSlide = next === this.slides.length ? 0 : next;
   }
 
+  onClickIndicator(index: number) {
+    console.log('ici', index)
+    const next = index;
+    this.currentSlide = next === this.slides.length ? 0 : next;
+  }
+
   ngOnInit() {
 
   }

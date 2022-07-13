@@ -1,12 +1,7 @@
 <!-- carousel -->
 <div class="carousel">
   <ng-container *ngFor="let slide of slides; let i = index">
-    <img
-      *ngIf="i === currentSlide"
-      [src]="slide.src"
-      class="slide"
-      [@slideAnimation]="animationType"
-    />
+    <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" [@slideAnimation]="animationType" />
   </ng-container>
 
   <!-- controls -->
@@ -16,4 +11,8 @@
   <button class="control next" (click)="onNextClick()">
     <span class="arrow right"></span>
   </button>
+
+  <ul class="indicators">
+    <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': currentSlide === i }" (click)="onClickIndicator(i)"></li>
+  </ul>
 </div>

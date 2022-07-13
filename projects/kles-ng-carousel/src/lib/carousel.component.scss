@@ -30,7 +30,7 @@
 }
 
 .slide:hover {
-  transform: scale(1.025);
+  transform: scale(1.1);
 }
 
 // =========================
@@ -64,6 +64,7 @@
   &.next {
     right: 0;
   }
+
   &.prev {
     left: 0;
   }
@@ -76,14 +77,52 @@
   border-bottom: 0.1em solid rgba(0, 0, 0, 0.24);
   width: 0.5em;
   height: 0.5em;
-  
-  
+
+
   &.left {
     transform: rotate(45deg);
     // box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
   }
+
   &.right {
     transform: rotate(225deg);
     // box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
   }
+}
+
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  // width: 100%;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  right: 0;
+  left: 0;
+  display: flex;
+}
+
+.indicators li {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 25px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(185,185,185, .3);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+
+.indicators .active {
+  // background-color: rgb(185, 185, 185);
+  background-color: #fff
 }
