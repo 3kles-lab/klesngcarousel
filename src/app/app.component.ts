@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { KlesCarouselComponent, AnimationType, KlesSlide } from 'kles-ng-carousel';
+import { KlesCarouselComponent, AnimationType, KlesSlide, IndicatorsPosition } from 'kles-ng-carousel';
 
 
 @Component({
@@ -11,6 +11,7 @@ export class AppComponent {
   @ViewChild(KlesCarouselComponent) carousel: KlesCarouselComponent;
 
   animationType = AnimationType.Fade;
+  indicatorsPosition = IndicatorsPosition.On;
 
   animationTypes = [
     {

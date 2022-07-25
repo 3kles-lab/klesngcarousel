@@ -13,6 +13,7 @@ import {
   jackIn,
   jackOut
 } from './carousel.animations';
+import { IndicatorsPosition } from './carousel.position';
 
 @Component({
   selector: 'kles-carousel',
@@ -57,6 +58,9 @@ import {
 export class KlesCarouselComponent implements OnInit {
   @Input() slides: KlesSlide[];
   @Input() animationType = AnimationType.Fade;
+  @Input() indicatorsPosition = IndicatorsPosition.On;
+
+  indicatorsPositionEnum = IndicatorsPosition;
 
   currentSlide = 0;
 

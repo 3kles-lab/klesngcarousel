@@ -11,11 +11,16 @@
   position: relative;
   min-height: 200px;
   height: 100%;
+  // height: calc(100% - 32px);
   // width: 100%;
   width: inherit;
   // height: inherit;
   overflow: hidden;
   border-radius: 0.5em;
+}
+
+.carousel-indicators{
+  height: calc(100% - 32px);
 }
 
 .slide {
@@ -92,10 +97,9 @@
 }
 
 
+
+
 .indicators {
-  position: absolute;
-  bottom: 10px;
-  // width: 100%;
   list-style: none;
   justify-content: center;
   padding-left: 0;
@@ -104,6 +108,11 @@
   right: 0;
   left: 0;
   display: flex;
+}
+
+.inside {
+  position: absolute;
+  bottom: 10px;
 }
 
 .indicators li {
@@ -116,7 +125,7 @@
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
-  background-color: rgba(185,185,185, .3);
+  background-color: rgba(185, 185, 185, .3);
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);

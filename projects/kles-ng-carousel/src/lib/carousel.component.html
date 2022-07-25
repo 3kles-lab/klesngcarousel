@@ -1,5 +1,5 @@
 <!-- carousel -->
-<div class="carousel">
+<div class="carousel" [ngClass]="indicatorsPosition === indicatorsPositionEnum.Below ? 'carousel-indicators' : ''">
   <ng-container *ngFor="let slide of slides; let i = index">
     <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" [@slideAnimation]="animationType" />
   </ng-container>
@@ -12,7 +12,11 @@
     <span class="arrow right"></span>
   </button>
 
-  <ul class="indicators">
+  <ul class="indicators inside" *ngIf="indicatorsPosition === indicatorsPositionEnum.On">
     <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': currentSlide === i }" (click)="onClickIndicator(i)"></li>
   </ul>
 </div>
+
+<ul class="indicators" *ngIf="indicatorsPosition === indicatorsPositionEnum.Below">
+  <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': currentSlide === i }" (click)="onClickIndicator(i)"></li>
+</ul>
