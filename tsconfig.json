@@ -10,7 +10,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -27,6 +27,7 @@
         "dist/kles-ng-carousel/kles-ng-carousel",
         "dist/kles-ng-carousel"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }
