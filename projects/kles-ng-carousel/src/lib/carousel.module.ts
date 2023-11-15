@@ -11,11 +11,8 @@ const components = [KlesCarouselComponent];
         components
     ],
     imports: [CommonModule, FormsModule],
-    entryComponents: [
-        components
-    ],
     exports: [
         components,
-    ],
+    ]
 })
 export class KlesCarouselModule { }
