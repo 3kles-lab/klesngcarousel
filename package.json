@@ -2,6 +2,8 @@
   "name": "kles-ng-carousel",
   "version": "17.0.1",
   "scripts": {
+    "build:lib": "ng build kles-ng-carousel --configuration production",
+    "publish:lib": "cd dist/kles-ng-carousel && npm publish --registry 'http://192.168.111.61:8081/repository/npm-3kles/'  --force",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
