@@ -1,8 +1,10 @@
 <!-- carousel -->
 <div class="carousel" [ngClass]="indicatorsPosition === indicatorsPositionEnum.Below ? 'carousel-indicators' : ''">
-  <ng-container *ngFor="let slide of slides; let i = index">
-    <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" [@slideAnimation]="animationType" />
-  </ng-container>
+  @for (slide of slides; track slide.src) {
+    @if ($index === currentSlide) {
+      <img [src]="slide.src" class="slide" [@slideAnimation]="animationType"/>
+    }
+  }
 
   <!-- controls -->
   <button class="control prev" (click)="onPreviousClick()">
@@ -12,11 +14,19 @@
     <span class="arrow right"></span>
   </button>
 
-  <ul class="indicators inside" *ngIf="indicatorsPosition === indicatorsPositionEnum.On">
-    <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': currentSlide === i }" (click)="onClickIndicator(i)"></li>
-  </ul>
+  @if (indicatorsPosition === indicatorsPositionEnum.On) {
+    <ul class="indicators inside">
+      @for (slide of slides; track slide.src) {
+        <li [ngClass]="{'active': currentSlide === $index }" (click)="onClickIndicator($index)"></li>
+      }
+    </ul>
+  }
 </div>
 
-<ul class="indicators" *ngIf="indicatorsPosition === indicatorsPositionEnum.Below">
-  <li *ngFor="let slide of slides; let i = index" [ngClass]="{'active': currentSlide === i }" (click)="onClickIndicator(i)"></li>
-</ul>
+@if (indicatorsPosition === indicatorsPositionEnum.Below) {
+  <ul class="indicators">
+    @for (slide of slides; track slide.src) {
+      <li [ngClass]="{'active': currentSlide === $index }" (click)="onClickIndicator($index)"></li>
+    }
+  </ul>
+}

@@ -119,7 +119,7 @@
       "prefix": "kles",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/kles-ng-carousel/tsconfig.lib.json",
             "project": "projects/kles-ng-carousel/ng-package.json"
